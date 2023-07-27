@@ -1,7 +1,8 @@
 # Python : for文の処理をインデクシングに置き換えて高速化する。
-## 制作物PRです．PythonとGithubを学習中です。
+## 制作物PRです。Python、Githubを学習中です。
 
 ### 概要
+ラベル領域の面積を取得するプログラムです。ラベルデータの面積を取得する関数は、存在しますが、Pythonのインデクシングを学習する目的で制作しました．インデクシングを用いた処理を学習することで、より複雑なfor文の処理を高速化できると思います。
 
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/test.jpg)
 
