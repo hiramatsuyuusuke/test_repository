@@ -6,25 +6,31 @@
 
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/fig.1.jpg)
 
-インデクシングを用いたプログラムです。
+次のプログラムは、for文の処理をインデクシングに置き換えたプログラムです。
 ```python
+#for文の処理をインデクシングに置き換えて高速化する。
 #重なる部分の画素数を取得
 #画素数取得用配列
 __seg_AND = np.zeros( (__segments, __max_label_cell_net + 1) )
 #生体モデルのラベルの要素番号
 for __ii in range( 0, __max_label_cell_net + 1):
+
+    ####################インデクシングを用いる部分#####################
     #__mem_list1[__im_count]のラベル番号と同じ位置にある__BSDS300_labelのラベル番号のリストを取得
     #__mem_list1[__im_count]と__BSDS300_labelは同じサイズの2次元配列
     __over_laps_list = __BSDS300_label[ __mem_list1[__im_count] == __ii ]
+    #################################################################
+
     #同じ位置にあるラベル番号を参照して、画素数をカウントする．
     for __i, __value in enumerate( __over_laps_list ):
         __ivalue = int( __value )
         __seg_AND[ __ivalue, __ii ] += 1 #重なる部分の画素数を取得
 ```
 
-上記のインデクシング部分をfor文で書いたプログラムです
-
+下記のプログラムは、上記のインデクシング部分をfor文で書いたプログラムです。
+下記のプログラムは、上記のプログラムと同じ結果を出力します。
 ```python
+#インデクシングを用いない場合。
 #重なる部分の画素数を取得
 #画素数取得用配列
 __seg_AND = np.zeros( (__segments, __max_label_cell_net + 1) )
@@ -41,3 +47,8 @@ for __i in range( 0, __segments):
                     #重なる部分の画素数を取得
                     __seg_AND[ __i, __ii ] += 1
 ```
+
+### Pythonを用いたインデクシングの学習結果と感想
+for文をインデクシングに置き換えることで、処理速度が大きく向上しました。
+自身の感覚では、Cでfor文を書いた場合よりも早いのではないかと感じています。
+さらに、画素数をfor文でカウントしている部分をインデクシングに置き換えることができそうです。また、変数の頭にアンダーバーが付いているのは、制作当時、Pythonのスコープがよく分かっていなかったからです。
