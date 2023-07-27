@@ -5,6 +5,7 @@
 ２つのラベル画像を比較して、重なるラベル領域の面積を取得するプログラムです。プログラムの制作を通じて、Pythonのインデクシングを学習しました。インデクシングを用いた処理を学習することで、より複雑なfor文の処理を高速化できるようになると思います。
 
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/fig.1.jpg)
+
 インデクシングを用いたプログラムです。
 ```python
 #重なる部分の画素数を取得
