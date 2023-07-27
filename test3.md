@@ -2,10 +2,10 @@
 ## 制作物PRです。Python、Githubを学習中です。
 
 ### 概要
-２つのラベル画像を比較して、重なるラベル領域の面積を取得するプログラムです。プログラムの制作を通じて、Pythonのインデクシングを学習しました。インデクシングを用いた処理を学習することで、より複雑なfor文の処理を高速化できる様になると思います。
+２つのラベル画像を比較して、重なるラベル領域の面積を取得するプログラムです。プログラムの制作を通じて、Pythonのインデクシングを学習しました。インデクシングを用いた処理を学習することで、より複雑なfor文の処理を高速化できるようになると思います。
 
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/fig.1.jpg)
-
+インデクシングを用いたプログラムです。
 ```python
 #重なる部分の画素数を取得
 #画素数取得用配列
@@ -20,7 +20,8 @@ for __ii in range( 0, __max_label_cell_net + 1):
         __ivalue = int( __value )
         __seg_AND[ __ivalue, __ii ] += 1 #重なる部分の画素数を取得
 ```
-wwww
+
+上記のインデクシング部分をfor文で書いたプログラムです
 
 ```python
 #重なる部分の画素数を取得
