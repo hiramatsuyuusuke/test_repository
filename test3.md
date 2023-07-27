@@ -1,4 +1,4 @@
-# Python:for文の処理をインデクシングにして高速化する
+# Python学習中 : for文の処理をインデクシングにして高速化する
 ## 制作物PR
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/test.jpg)
 
